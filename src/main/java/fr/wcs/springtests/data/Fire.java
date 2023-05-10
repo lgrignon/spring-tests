@@ -26,12 +26,15 @@ public class Fire {
 
     private Instant date;
 
+    private String name;
+
     public Fire() {
     }
     
-    public Fire(@Min(value = 0, message = "severity must be positive") int severity, Instant date) {
+    public Fire(@Min(value = 0, message = "severity must be positive") int severity, String name, Instant date) {
         this.severity = severity;
         this.date = date;
+        this.name = name;
     }
 
     public Long getId() {
@@ -44,6 +47,9 @@ public class Fire {
 
     public Instant getDate() {
         return date;
+    }
+    public String getName() {
+        return name;
     }
 
     
